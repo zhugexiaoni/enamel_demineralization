@@ -20,7 +20,7 @@ def display_image_from_labelsme_json(json_file_path):
 
     # 解码 base64 编码的数据
     image_data = base64.b64decode(image_data_encoded)
-
+    
     # 使用 PIL 加载图像
     image = Image.open(BytesIO(image_data))
 
