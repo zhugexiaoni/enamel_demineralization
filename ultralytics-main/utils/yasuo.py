@@ -1,7 +1,7 @@
 from PIL import Image  
 import os  
   
-def compress_images(folder_path, output_folder, size=(1280, 720)):  
+def compress_images(folder_path, output_folder, size=(1080, 720)):
     """  
     批量压缩指定文件夹中的所有图片到指定大小，并保存到另一个文件夹中。  
   

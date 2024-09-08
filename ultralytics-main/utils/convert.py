@@ -26,7 +26,7 @@ def convert_labelme_to_yolo(json_folder, output_folder):
                     # 如果没有imagePath，可能需要从文件名或其他地方获取图像尺寸
                     # 这里我们假设所有图像都有相同的尺寸，并已通过参数传入
                     pass
-                image_name = os.path.splitext(os.path.basename(image_path))[0]
+                image_name = os.path.splitext(os.path.basename(filename))[0]
 
                 with open(os.path.join(output_folder, f"{image_name}.txt"), 'w') as out:
                     for shape in data['shapes']:
