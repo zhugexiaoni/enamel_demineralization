@@ -50,21 +50,16 @@ def convert_labelme_to_yolo(json_folder, output_folder):
                         center_y = (y_min + y_max) / (2 * image_height)
                         width = (x_max - x_min) / image_width
                         height = (y_max - y_min) / image_height
-                        # 为适应图片压缩，坐标同比缩放
-                        center_x *= 720/4480
-                        center_y *= 720/4480
-                        width *= 720/4480
-                        height *= 720/4480
 
                         # YOLO格式：类别 中心点x 中心点y 宽度 高度
                         line = f"{label} {center_x} {center_y} {width} {height}\n"
                         out.write(line)
             print(image_name+'.txt',"保存成功")
 
-json_folder = "/home/aistudio/data/data293184/json"
-output_folder = "/home/aistudio/data/data293184/labels"
+json_folder = r"F:\AI_tooth\data\json"
+output_folder = r"F:\AI_tooth\data\labels"
 
-convert_labelme_to_yolo(json_folder, output_folder)
+# convert_labelme_to_yolo(json_folder, output_folder)
 
 # 从json转为图片
 def get_image(json_folder, output_folder,size):
@@ -102,8 +97,8 @@ def get_image(json_folder, output_folder,size):
                 
                 print(f"Image saved to {output_path}")
 
-json_folder = "/home/aistudio/data/data293184/json"
-output_folder = "/home/aistudio/data/data293184/images"
+json_folder = r"F:\AI_tooth\data\json"
+output_folder = r"F:\AI_tooth\data\images"
 
 get_image(json_folder, output_folder, size=(1080, 720))
 
@@ -184,7 +179,7 @@ def split_data(file_path, xml_path, new_file_path, train_rate, val_rate, test_ra
         shutil.copy(old_path, new_path)
 
 
-file_path = r"/home/aistudio/data/data293184/images"
-txt_path = r"/home/aistudio/data/data293184/labels"
-new_file_path = r"/home/aistudio/work/yolo_data"
-split_data(file_path, txt_path, new_file_path, train_rate=0.7, val_rate=0.2, test_rate=0.1)
+file_path = r"F:\AI_tooth\data\images"
+txt_path = r"F:\AI_tooth\data\labels"
+new_file_path = r"F:\AI_tooth\data\yolo_data"
+# split_data(file_path, txt_path, new_file_path, train_rate=0.7, val_rate=0.2, test_rate=0.1)

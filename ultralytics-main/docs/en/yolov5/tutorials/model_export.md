@@ -128,7 +128,7 @@ ONNX: export success ✅ 2.3s, saved as yolov5s.onnx (28.0 MB)
 Export complete (5.5s)
 Results saved to /content/yolov5
 Detect:          python detect.py --weights yolov5s.onnx
-Validate:        python val.py --weights yolov5s.onnx
+Validate:        python segment_test.py --weights yolov5s.onnx
 PyTorch Hub:     model = torch.hub.load('ultralytics/yolov5', 'custom', 'yolov5s.onnx')
 Visualize:       https://netron.app/
 ```
@@ -160,7 +160,7 @@ python detect.py --weights yolov5s.pt                 # PyTorch
 `val.py` runs validation on exported models:
 
 ```bash
-python val.py --weights yolov5s.pt                 # PyTorch
+python segment_test.py --weights yolov5s.pt                 # PyTorch
                         yolov5s.torchscript        # TorchScript
                         yolov5s.onnx               # ONNX Runtime or OpenCV DNN with dnn=True
                         yolov5s_openvino_model     # OpenVINO
@@ -209,7 +209,7 @@ OpenCV inference with ONNX models:
 python export.py --weights yolov5s.pt --include onnx
 
 python detect.py --weights yolov5s.onnx --dnn  # detect
-python val.py --weights yolov5s.onnx --dnn  # validate
+python segment_test.py --weights yolov5s.onnx --dnn  # validate
 ```
 
 ## C++ Inference

@@ -64,7 +64,7 @@ python train.py
 Validate the model for Precision, Recall, and mAP
 
 ```bash
-python val.py --weights yolov5s.pt
+python segment_test.py --weights yolov5s.pt
 ```
 
 Run inference on images and videos:
@@ -91,5 +91,5 @@ For example:
 ```bash
 %%bash
 source activate newenv
-python val.py --weights yolov5s.pt
+python segment_test.py --weights yolov5s.pt
 ```

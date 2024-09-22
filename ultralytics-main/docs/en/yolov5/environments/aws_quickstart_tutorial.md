@@ -68,7 +68,7 @@ Then, start training, testing, detecting, and exporting YOLOv5 models:
 
 ```bash
 python train.py  # train a model
-python val.py --weights yolov5s.pt  # validate a model for Precision, Recall, and mAP
+python segment_test.py --weights yolov5s.pt  # validate a model for Precision, Recall, and mAP
 python detect.py --weights yolov5s.pt --source path/to/images  # run inference on images and videos
 python export.py --weights yolov5s.pt --include onnx coreml tflite  # export models to other formats
 ```
