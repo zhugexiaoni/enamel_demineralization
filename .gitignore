@@ -13,6 +13,7 @@ develop-eggs/
 dist/
 downloads/
 eggs/
+data/
 .eggs/
 lib/
 lib64/
@@ -147,6 +148,7 @@ tests/
 weights/
 *.weights
 *.pt
+*.pth
 *.pb
 *.onnx
 *.engine
