@@ -179,3 +179,5 @@ cv2.imwrite('masked_image_test.jpg', masked_image)
 
 # 如果背景是透明的
 cv2.imwrite('masked_image_test.png', masked_image_rgba)
+
+# label-studio-ml start sam --port 8003 --with sam_config=vit_h sam_checkpoint_file=sam_vit_h_4b8939.pth out_mask=True out_bbox=True device=cuda:0
