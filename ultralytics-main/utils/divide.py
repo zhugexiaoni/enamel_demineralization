@@ -75,7 +75,7 @@ def split_data(file_path, xml_path, new_file_path, train_rate, val_rate, test_ra
 
 
 if __name__ == '__main__':
-    file_path = r"F:\AI_tooth\data\images"
-    txt_path = r"F:\AI_tooth\data\labels"
-    new_file_path = r"F:\AI_tooth\data\yolo_data"
+    file_path = r"F:\AI_tooth\data\segment\labels\project1\images"
+    txt_path = r"F:\AI_tooth\data\segment\labels\project1\labels"
+    new_file_path = r"F:\AI_tooth\data\segment\yolo_data"
     split_data(file_path, txt_path, new_file_path, train_rate=0.7, val_rate=0.2, test_rate=0.1)

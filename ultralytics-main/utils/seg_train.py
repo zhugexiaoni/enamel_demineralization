@@ -7,16 +7,16 @@ if __name__ == '__main__':
     # 训练参数 ----------------------------------------------------------------------------------------------
     model.train(
         data=r'seg_data.yaml',
-        epochs=100,  # (int) 训练的周期数
+        epochs=50,  # (int) 训练的周期数
         patience=50,  # (int) 等待无明显改善以进行早期停止的周期数
         batch=32,  # (int) 每批次的图像数量（-1 为自动批处理）
         imgsz=(1080,720),  # (int) 输入图像的大小，整数或w，h
         save=True,  # (bool) 保存训练检查点和预测结果
         save_period=-1,  # (int) 每x周期保存检查点（如果小于1则禁用）
         cache=False,  # (bool) True/ram、磁盘或False。使用缓存加载数据
-        device='',  # (int | str | list, optional) 运行的设备，例如 cuda device=0 或 device=0,1,2,3 或 device=cpu
+        device=0,  # (int | str | list, optional) 运行的设备，例如 cuda device=0 或 device=0,1,2,3 或 device=cpu
         workers=8,  # (int) 数据加载的工作线程数（每个DDP进程）
-        project='runs/segment/train',  # (str, optional) 项目名称
+        # project='tooth_seg',  # (str, optional) 项目名称
         name='exp',  # (str, optional) 实验名称，结果保存在'project/name'目录下
         exist_ok=False,  # (bool) 是否覆盖现有实验
         pretrained=True,  # (bool | str) 是否使用预训练模型（bool），或从中加载权重的模型（str）
